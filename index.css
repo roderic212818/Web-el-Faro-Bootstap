@@ -1,0 +1,79 @@
+body {
+
+
+    background-image: url("./Imagenes/faro-fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.anuncios{
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+
+
+.card {
+    margin: 15px;
+
+}
+
+.card-anuncios {
+    margin-top: 100px;
+}
+
+.card-destacado {
+    
+    border: 10px solid #0c0c0c;
+    background-color: #0c0c0c;
+    border-radius: 20px;
+    /* agrega esquinas redondeadas */
+    box-shadow: 0 8px 4px rgba(0, 0, 0, .2);
+    /* agrega una sombra */
+}
+
+.card-medium { 
+    margin-top: 50px;
+}
+
+
+aside {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    float: right;
+    width: 30%;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+footer h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
