@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Crear un elemento article para la noticia
         const noticia = document.createElement('div');
         noticia.classList.add('card');
-        noticia.classList.add('noticia');
+        
 
         // Agregar el título, autor, imagen y el contenido de la noticia
         const imagenNoticia = document.createElement('img');
