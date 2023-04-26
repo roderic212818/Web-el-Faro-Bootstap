@@ -38,13 +38,16 @@
                         Menu
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Clima</a></li>
-                        <li><a class="dropdown-item" href="#">Indicadores economicos</a></li>
-                        <li><a class="dropdown-item" href="#">Horoscopo</a></li>
+                        <li><a class="dropdown-item" href="https://www.accuweather.com/es/cl/chile-weather">Clima</a>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="https://si3.bcentral.cl/Indicadoressiete/secure/Indicadoresdiarios.aspx">Indicadores
+                                economicos</a></li>
+                        <li><a class="dropdown-item" href="https://www.horoscopo.com/">Horoscopo</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Anuncia con nosotros</a></li>
+                        <li><a class="dropdown-item" href="./anuncios.html">Anuncia con nosotros</a></li>
                     </ul>
                 </li>
             </ul>
@@ -58,9 +61,16 @@
                     </h5>
                 </div>
             </div>
-            <button type="button" class="btn btn-success boton-noticia"
-                onclick="window.location.href='./contacto.html'">Agregar noticia</button>
-        </div>
+            <!--<button type="button" class="btn btn-success boton-noticia"
+                onclick="window.location.href='./crearNoticia.html'">Agregar noticia</button>-->
+            <div class="card card-hora" style="width: min-content;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <p>Articulos:</p>
+                        <p id="contador"></p>
+                    </h5>
+                </div>
+            </div>
     </nav>
 
     <section class="anuncios" style="background-color: yellow;">
@@ -123,54 +133,12 @@
 
         <div class="row"><!--Contenedor de noticias en horizontal-->
 
-            <div class="col-md-6 card-destacado"><!--Grupo de 3 tarjetas-->
-                <div id="carouselExampleCaptions" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./Imagenes/noticia1.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Noticia destacada 1</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./Imagenes/noticia2.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Noticia destacada 2</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./Imagenes/noticia3.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Noticia destacada 3</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+            <div class="col-md-6 card-destacado" id="destacado"><!--Destacado-->
+        
             </div>
 
 
-            <div class="col-md-3"><!--Grupo de 3 tarjetas-->
+            <div class="col-md-3 noticia"><!--Grupo de 3 tarjetas-->
                 <div class="card">
                     <img src="./imagenes/greenglass.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -184,7 +152,7 @@
             </div>
 
 
-            <div class="col-md-3"><!--Grupo de 3 tarjetas-->
+            <div class="col-md-3 noticia"><!--Grupo de 3 tarjetas-->
                 <div class="card">
                     <img src="./imagenes/greenglass.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -199,7 +167,7 @@
 
 
 
-            <div class="col-md-4 "><!--Grupo de 3 tarjetas-->
+            <div class="col-md-4 noticia "><!--Grupo de 3 tarjetas-->
                 <div class="card card-medium">
                     <img src="./imagenes/greenglass.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -212,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4"><!--Grupo de 3 tarjetas-->
+            <div class="col-md-4 noticia"><!--Grupo de 3 tarjetas-->
                 <div class="card card-medium">
                     <img src="./imagenes/greenglass.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -225,7 +193,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4"><!--Grupo de 3 tarjetas-->
+            <div class="col-md-4 noticia"><!--Grupo de 3 tarjetas-->
                 <div class="card card-medium">
                     <img src="./imagenes/greenglass.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -246,7 +214,44 @@
     </div>
 
 
+<!--Formulario-->
 
+
+<form class="mt-5" id="formulario-articulo">
+    <div class="form-group">
+        <label for="titulo">Título de la noticia</label>
+        <input type="text" class="form-control" id="titulo" required>
+        <div class="invalid-feedback">Por favor ingrese un título para la noticia.</div>
+    </div>
+    <div class="form-group">
+        <label for="autor">Autor</label>
+        <input type="text" class="form-control" id="autor" required>
+        <div class="invalid-feedback">Por favor ingrese el nombre del autor.</div>
+    </div>
+    <div class="form-group">
+        <label for="categoria">Categoría</label>
+        <select class="form-control" id="categoria" required>
+            <option value="">--Seleccione una categoría--</option>
+            <option value="principal">Principal</option>
+            <option value="deportes">Deportes</option>
+            <option value="negocios">Negocios</option>
+
+        </select>
+        <div class="invalid-feedback">Por favor seleccione una categoría.</div>
+    </div>
+    <div class="form-group">
+        <label for="contenido">Contenido</label>
+        <textarea class="form-control" id="contenido" rows="5" required></textarea>
+        <div class="invalid-feedback">Por favor ingrese el contenido de la noticia.</div>
+    </div>
+    <div class="form-group">
+        <label for="imagen">Imagen</label>
+        <input type="file" class="form-control-file" id="imagenInput">
+        <small class="form-text text-muted">Seleccione una imagen (opcional).</small>
+    </div>
+    <button type="submit" class="btn btn-primary mt-5">Crear noticia</button>
+    <button type="submit" class="btn btn-danger mt-5" onclick="window.location.href='index.html'">Salir</button>
+</form>
 
 
 
@@ -277,6 +282,8 @@
     </footer>
 
     <script src="fecha-hora.js"></script>
+    <script src="./contador.js"></script>
+    <script src="./noticias.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
