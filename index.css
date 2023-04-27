@@ -140,3 +140,25 @@ label {
 .is-invalid~.invalid-feedback {
     display: block;
 }
+
+.btn-group-vertical {
+    float: right;
+
+
+
+    /*position: sticky;
+    top: 15;*/
+}
+
+.list-group {
+    margin: 1%;
+}
+
+.list-group-item {
+    font-size: larger;
+}
+
+.titulo-secciones {
+    text-align: center;
+    background-color: #dc3545;
+}

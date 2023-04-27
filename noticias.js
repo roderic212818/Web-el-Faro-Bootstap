@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     formulario.addEventListener('submit', publicarNoticia);
 });
 
+
+
 function publicarNoticia(evento) {
     evento.preventDefault(); // Evitar que se recargue la página al enviar el formulario
 
@@ -42,13 +44,13 @@ function publicarNoticia(evento) {
     tituloNoticia.textContent = titulo;
     tituloNoticia.classList.add('card-title')
     nuevoDivBody.appendChild(tituloNoticia);
-    
+
     const contenidoNoticia = document.createElement('p');
     contenidoNoticia.textContent = contenido;
     contenidoNoticia.classList.add('card-text')
     nuevoDivBody.appendChild(contenidoNoticia);
 
-    const enlace =  document.createElement('a');
+    const enlace = document.createElement('a');
     enlace.textContent = 'ir a la noticia';
     enlace.classList.add('btn');
     enlace.classList.add('btn-primary');
@@ -59,13 +61,9 @@ function publicarNoticia(evento) {
     // Agregar el nuevo elemento div como hijo del elemento noticia
     noticia.appendChild(nuevoDiv);
 
-    
+
     // Agregar el título, autor,fecha, hora, imagen y el contenido de la noticia
-   
 
-    
-
-   
     /*const nombreAutor = document.createElement('p');
     nombreAutor.textContent = autor;
     nombreAutor.classList.add('card-text')
@@ -89,20 +87,11 @@ function publicarNoticia(evento) {
 
 
 
-   
-
-
-    // Agregar un botón para eliminar la noticia
-    /*const botonEliminar = document.createElement('button');
-    botonEliminar.textContent = 'Eliminar';
-    botonEliminar.addEventListener('click', function () {
-        noticia.remove();
-    });
-    noticia.appendChild(botonEliminar);*/
-
     // Agregar la noticia al elemento "noticias"
     const contenedorNoticias = document.getElementById('normal');
     contenedorNoticias.appendChild(noticia);
+
+ 
 
     // Limpiar el formulario después de publicar la noticia
     document.getElementById('titulo').value = '';

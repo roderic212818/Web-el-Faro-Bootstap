@@ -1,56 +1,75 @@
 document.addEventListener('DOMContentLoaded', function () {
     const formulario = document.getElementById('formulario-articulo');
     formulario.addEventListener('submit', publicarNoticia);
-    const contenedorNoticias = document.getElementById('destacado');
+
+
+    const contenedorNoticiasDestacada = document.getElementById('destacado');
+
     let noticiaAnterior = null;
+
 
     function publicarNoticia(evento) {
         evento.preventDefault(); // Evitar que se recargue la página al enviar el formulario
 
         // Obtener los valores del formulario
-        const titulo = document.getElementById('titulo').value;
-        const autor = document.getElementById('autor').value;
-        const categoria = document.getElementById('categoria').value;
-        const contenido = document.getElementById('contenido').value;
+
         const imagenInput = document.getElementById('imagenInput');
+        // seleccionar el elemento del input
+const contenidoInput = document.querySelector('#titulo');
+
+// obtener el valor actual del input
+const contenidoValor = contenidoInput.value;
 
         // Crear un elemento article para la noticia
-        const noticia = document.createElement('div');
-        noticia.classList.add('card');
-        
+        const noticia1 = document.createElement('div');
+        noticia1.classList.add('card');
 
-        // Agregar el título, autor, imagen y el contenido de la noticia
+
+        // Agregar imagen  y titulo
+
         const imagenNoticia = document.createElement('img');
         const imagen = imagenInput.files[0];
         const imagenUrl = URL.createObjectURL(imagen);
         imagenNoticia.src = imagenUrl;
         imagenNoticia.classList.add('card-img-top');
-        noticia.appendChild(imagenNoticia);
+        noticia1.appendChild(imagenNoticia);
+
+
+        const nuevoDivBody = document.createElement('div');
+        nuevoDivBody.classList.add('card-body');
+
 
         const tituloNoticia = document.createElement('h5');
-        tituloNoticia.textContent = titulo;
+        tituloNoticia.textContent = contenidoValor;
         tituloNoticia.classList.add('card-title')
-        noticia.appendChild(tituloNoticia);
+        nuevoDivBody.appendChild(tituloNoticia);
 
-        const contenidoNoticia = document.createElement('p');
-        contenidoNoticia.textContent = contenido;
-        noticia.appendChild(contenidoNoticia);
+
+
+        noticia1.appendChild(nuevoDivBody);
+
+
+
+
+
+
 
 
         //logica
         // Si ya existe una noticia anterior, reemplazarla con la nueva
         if (noticiaAnterior !== null) {
-            contenedorNoticias.replaceChild(noticia, noticiaAnterior);
+            contenedorNoticiasDestacada.replaceChild(noticia1, noticiaAnterior);
         } else {
-            contenedorNoticias.appendChild(noticia);
+            contenedorNoticiasDestacada.appendChild(noticia1);
         }
 
         // Guardar la nueva noticia como noticia anterior
-        noticiaAnterior = noticia;
+        noticiaAnterior = noticia1;
+
+
 
         // Limpiar el formulario después de publicar la noticia
-        document.getElementById('titulo').value = '';
-        document.getElementById('contenido').value = '';
-        document.getElementById('autor').value = '';
+
     }
+
 });

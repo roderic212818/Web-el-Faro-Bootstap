@@ -30,26 +30,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./negocios.html">Negocios</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">Contacto</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Menu
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="https://www.accuweather.com/es/cl/chile-weather">Clima</a>
-                        </li>
-                        <li><a class="dropdown-item"
-                                href="https://si3.bcentral.cl/Indicadoressiete/secure/Indicadoresdiarios.aspx">Indicadores
-                                economicos</a></li>
-                        <li><a class="dropdown-item" href="https://www.horoscopo.com/">Horoscopo</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="./anuncios.html">Anuncia con nosotros</a></li>
-                    </ul>
-                </li>
+
+
             </ul>
 
 
@@ -127,6 +109,30 @@
         </div>
     </section>
 
+    <!--Menu Lateral-->
+
+
+    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+
+        <div class="list-group bg-dark">
+            <a href="./contacto.html" class="list-group-item list-group-item-action h1">Contacto</a>
+            <a href="https://www.accuweather.com/es/cl/chile-weather"
+                class="list-group-item list-group-item-action h1 list-group-item-primary">Clima</a>
+            <a href="https://www.horoscopo.com/"
+                class="list-group-item list-group-item-action h1 list-group-item-secondary">Horoscopo</a>
+            <a href="https://si3.bcentral.cl/Indicadoressiete/secure/Indicadoresdiarios.aspx"
+                class="list-group-item list-group-item-action h1 list-group-item-success">Indicadores economicos</a>
+            <a href="https://www.latercera.com/"
+                class="list-group-item list-group-item-action h1 list-group-item-danger">Diario La tercera</a>
+            <a href="https://www.bbc.com/"
+                class="list-group-item list-group-item-action h1 list-group-item-warning">BBC</a>
+
+
+        </div>
+
+
+
+    </div>
 
 
     <div class="container"><!--Contenedor de noticias-->
@@ -134,8 +140,10 @@
 
         <div class="row"><!--Contenedor de noticias en horizontal-->
 
+            
             <div class="col-md-8 card-destacado" id="destacado"><!--Destacada-->
-
+                <header class="display-4  text-white">Noticias destacadas</header>
+                
             </div>
 
 
@@ -216,7 +224,7 @@
     <form class="mt-5" id="formulario-articulo">
         <div class="form-group">
             <label for="titulo">Título de la noticia</label>
-            <input type="text" class="form-control" id="titulo" required>
+            <input type="text" class="form-control" id="titulo"  required>
             <div class="invalid-feedback">Por favor ingrese un título para la noticia.</div>
         </div>
         <div class="form-group">
@@ -226,7 +234,7 @@
         </div>
         <div class="form-group">
             <label for="categoria">Categoría</label>
-            <select class="form-control" id="categoria" required>
+            <select class="form-control" id="categoria" >
                 <option value="">--Seleccione una categoría--</option>
                 <option value="principal">Principal</option>
                 <option value="deportes">Deportes</option>
@@ -246,7 +254,6 @@
             <small class="form-text text-muted">Seleccione una imagen (opcional).</small>
         </div>
         <button type="submit" class="btn btn-primary mt-5">Crear noticia</button>
-        <button type="submit" class="btn btn-danger mt-5" onclick="window.location.href='index.html'">Salir</button>
     </form>
 
 
@@ -278,9 +285,12 @@
     </footer>
 
     <script src="fecha-hora.js"></script>
-    <script src="./contador.js"></script>
-    <script src="./noticias.js"></script>
     <script src="./otranoticia.js"></script>
+  <script src="./noticias.js"></script>
+  <script src="./contador.js"></script>
+ 
+    
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
