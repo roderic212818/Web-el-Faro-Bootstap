@@ -10,8 +10,7 @@ function publicarNoticia(evento) {
 
     // Obtener los valores del formulario
     const titulo = document.getElementById('titulo').value;
-    const autor = document.getElementById('autor').value;
-    const categoria = document.getElementById('categoria').value;
+  
     const contenido = document.getElementById('contenido').value;
     const imagenInput = document.getElementById('imagenInput');
 
@@ -58,11 +57,11 @@ function publicarNoticia(evento) {
 
     nuevoDiv.appendChild(nuevoDivBody);
 
-    // Agregar el nuevo elemento div como hijo del elemento noticia
+
     noticia.appendChild(nuevoDiv);
 
 
-    // Agregar el título, autor,fecha, hora, imagen y el contenido de la noticia
+
 
     /*const nombreAutor = document.createElement('p');
     nombreAutor.textContent = autor;
@@ -91,7 +90,7 @@ function publicarNoticia(evento) {
     const contenedorNoticias = document.getElementById('normal');
     contenedorNoticias.appendChild(noticia);
 
- 
+
 
     // Limpiar el formulario después de publicar la noticia
     document.getElementById('titulo').value = '';
